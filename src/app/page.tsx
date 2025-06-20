@@ -71,7 +71,7 @@ export default function Home() {
 
     html5QrCodeScanner.render(
         (decodedText: string) => {
-          // Success callback
+            // Success callback
           addItemFromQR(decodedText)
           html5QrCodeScanner.clear()
           setIsQRModalVisible(false)
@@ -106,7 +106,8 @@ export default function Home() {
 
       setDataList(prev => [newItem, ...prev])
     } catch (error) {
-      message.error('Gagal memproses data QR')
+        console.log('Error parsing QR data:', error);
+        message.error('Gagal memproses data QR')
     }
   }
 
