@@ -319,7 +319,6 @@ export default function Home() {
             footer={null}
             width="90%"
             style={{ maxWidth: 400 }}
-            destroyOnClose
         >
           <div className="text-center">
             <div id="qr-reader" className="w-full"></div>
